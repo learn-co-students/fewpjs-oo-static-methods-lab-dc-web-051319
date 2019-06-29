@@ -16,7 +16,6 @@ class Formatter {
         titleized.push(word[0].toUpperCase()+word.substr(1).toLowerCase())
       }
       i++
-      debugger
     })
     return titleized.join(' ')
   }
