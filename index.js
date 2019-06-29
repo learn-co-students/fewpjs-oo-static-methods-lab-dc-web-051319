@@ -8,14 +8,12 @@ class Formatter {
   static titleize(string) {
     const exceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
     let titleized = []
-    let i = 0
     string.split(' ').map((word) => {
-      if (exceptions.includes(word) && i !== 0) {
+      if (exceptions.includes(word) && titleized.length !== 0) {
         titleized.push(word)
       } else {
         titleized.push(word[0].toUpperCase()+word.substr(1).toLowerCase())
       }
-      i++
     })
     return titleized.join(' ')
   }
